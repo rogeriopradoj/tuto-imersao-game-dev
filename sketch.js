@@ -1,7 +1,5 @@
 let imagemCenario;
 let imagemPersonagem;
-let alturaPersonagem;
-let larguraPersonagem;
 let cenario;
 let personagem;
 let somDoJogo;
@@ -16,9 +14,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   cenario = new Cenario(imagemCenario, 3);
   personagem = new Personagem(imagemPersonagem);
-  frameRate(20);
-  alturaPersonagem = 238;
-  larguraPersonagem = 110;
+  frameRate(16);
   somDoJogo.loop();
 }
 
