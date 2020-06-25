@@ -1,41 +1,50 @@
-class Personagem {
-  constructor(imagem) {
-    this.imagem = imagem;
-    this.matriz = [
-      [0, 0],
-      [231, 0],
-      [462, 0],
-      [693, 0],
-      [0, 500],
-      [231, 500],
-      [462, 500],
-      [693, 500],
-    ];
-    this.frameAtual = 0;
-    this.alturaPersonagem = 300;
-    this.larguraPersonagem = this.alturaPersonagem / 2.16;
+class Personagem extends Animacao {
+  constructor(
+    imagem,
+     imagemConfig,
+     xInicial,
+     altura
+  ) {
+    super(
+      imagem,
+      imagemConfig,
+      xInicial,
+      altura
+    )
+      this.yInicial = height - this.altura;
+      this.y = this.yInicial;
+      
+      this.velocidadeDoPulo = 0;
+      this.gravidade = 3;
   }
   
-  exibe() {
-    image(
-      imagemPersonagem,
-      0,
-      height - this.alturaPersonagem + 20, 
-      this.larguraPersonagem, this.alturaPersonagem, 
-      this.matriz[this.frameAtual][0], 
-      this.matriz[this.frameAtual][1],
-      231,
-      500
-    );
-    
-    this.anima();
+  pula() {
+    this.velocidadeDoPulo = -30;
   }
   
-  anima() {
-    this.frameAtual++;
+  aplicaGravidade() {
+    this.y = this.y + this.velocidadeDoPulo;
+    this.velocidadeDoPulo = this.velocidadeDoPulo + this.gravidade;
     
-    if (this.frameAtual >= this.matriz.length - 1) {
-      this.frameAtual = 0;
+    if (this.y > this.yInicial) {
+      this.y = this.yInicial;
     }
   }
+  
+  estaColidindo(inimigo) {
+    const precisao = 0.8;
+    const colisao = collideRectRect(
+      this.x,
+      this.y,
+      this.largura * precisao,
+      this.altura * precisao,
+      inimigo.x,
+      inimigo.y,
+      inimigo.largura * precisao,
+      inimigo.altura * precisao
+    )
+    
+    return colisao;
+  }
+
 }

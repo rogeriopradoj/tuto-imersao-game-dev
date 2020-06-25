@@ -30,3 +30,30 @@ https://rogeriopradoj.github.io/tuto-imersao-game-dev
 - Gif para sprites: https://ezgif.com/gif-to-sprite
 - Remover background: https://burner.bonanza.com/
 - Últimos retoques imagem (offline): http://www.effectmatrix.com/mac-appstore/mac-photo-editor-pixelstyle.htm
+
+### Desafios
+
+- [] Organizar a matriz no personagem.js, tirando os números fixos e substituindo-os por um cálculo
+- [] Criar sua conta no codepen.io
+- [] Criar a história da bruxa Hipsta. Por que ela está andando nessa floresta?
+- [] Fazer seus próprios sprites, criando um jogo com visual bem diferente! Homenageie seu heroi preferido, seu youtuber mais amado :).
+- [] Deixar a função de imagem mais limpa e organizada!
+- [] Marque o Paulo, a Juliana e o Guilherme com a hashtag #ImersaoGameDev pra vermos como ficou o seu jogo!
+
+## Aula 02
+
+### Vídeo YouTube
+
+[![#ImersaoGameDev - @RogerioPradoJ - Aula 02](https://img.youtube.com/vi/moyTC-uX4uM/0.jpg)](https://www.youtube.com/watch?v=moyTC-uX4uM)
+
+### Ferramentas usadas
+
+- Bolso: https://tenor.com/view/recuos-do-governo-bolsonaro-gif-13400376
+- Corona: https://sbadany.itch.io/coronavirus-spine-animations?download
+
+### Desafios
+
+- [] Fixe o pulo duplo em no máximo 2!
+- [] Faça um background com aparência 3D usando duas imagens diferentes, com velocidades diferentes. É o efeito paralaxe. Para isso, você precisa que o da frente tenha transparência
+- [] Coloque elementos diferentes em seu jogo: abelhas, borboletas, o que você achar que vai ficar legal!
+- [] Faça uma tela de game over mais elaborada, explicando o que aconteceu com a personagem e porque a pessoa perdeu.

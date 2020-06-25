@@ -2,6 +2,7 @@ class Cenario {
   constructor(imagem, velocidade) {
     this.imagem = imagem;
     this.velocidade = velocidade;
+    
     this.x1 = 0;
     this.x2 = width;
   }
