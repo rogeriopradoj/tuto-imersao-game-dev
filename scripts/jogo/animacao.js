@@ -3,31 +3,34 @@ class Animacao {
     imagem,
     imagemConfig,
     xInicial,
+    variacaoY,
     altura
   ) {
     this.imagem = imagem;
-    
+
     this.larguraSprite = this.imagem.width / imagemConfig.spritesX;
     this.alturaSprite = this.imagem.height / imagemConfig.spritesY;
-      
-      this.altura = altura;
-      this.largura = this.altura * this.larguraSprite / this.alturaSprite;
+
+    this.altura = altura;
+    this.largura = this.altura * this.larguraSprite / this.alturaSprite;
 
     this.x = xInicial;
-    this.y = height - this.altura;
-
+    this.variacaoY = variacaoY;
+    this.y = height - this.altura - this.variacaoY;
+      
     this.matriz = this.geraMatrizSprites(
       this.imagem.width,
       this.imagem.height,
       imagemConfig.spritesX,
-      imagemConfig.spritesY
+      imagemConfig.spritesY,
+      imagemConfig.spritesRemover
     );
 
     this.frameAtual = 0;
 
   }
 
-  geraMatrizSprites(tamanhoX, tamanhoY, spritesX, spritesY) {
+  geraMatrizSprites(tamanhoX, tamanhoY, spritesX, spritesY, spritesRemover = 0) {
     let tamanhoSpriteX = tamanhoX / spritesX;
     let tamanhoSpriteY = tamanhoY / spritesY;
 
@@ -49,6 +52,12 @@ class Animacao {
         matrizSprites.push([x, y]);
       }
     }
+    
+    if (spritesRemover > 0) {
+      for (let i = 0; i < spritesRemover; i++) {
+        matrizSprites.pop();
+      }
+    }
 
     return matrizSprites;
 
@@ -56,14 +65,19 @@ class Animacao {
 
   exibe() {
 
-    image(
-      this.imagem,
-      this.x, this.y,
-      this.largura, this.altura,
-      this.matriz[this.frameAtual][0], this.matriz[this.frameAtual][1],
-      this.larguraSprite, this.alturaSprite);
+        image(
+          this.imagem,
+          this.x,
+          this.y,
+          this.largura,
+          this.altura,
+          this.matriz[this.frameAtual][0],
+          this.matriz[this.frameAtual][1],
+          this.larguraSprite,
+          this.alturaSprite
+        );
 
-    this.anima();
+        this.anima();
   }
 
   anima() {

@@ -3,22 +3,28 @@ class Inimigo extends Animacao {
     imagem,
      imagemConfig,
      xInicial,
-     altura
+     variacaoY,
+     altura,
+     velocidade,
+     delay
   ) {
     super(
       imagem,
       imagemConfig,
       xInicial,
+      variacaoY,
       altura
     )
       
-    this.velocidade = 8;
+    this.velocidade = velocidade;
+    this.delay = delay;
+    this.x = width + this.delay;
   }
   
   move() {
     this.x = this.x - this.velocidade;
     
-    if(this.x < - this.largura){
+    if(this.x < - this.largura - this.delay){
       this.x = width;
     }
   }

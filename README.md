@@ -57,3 +57,16 @@ https://rogeriopradoj.github.io/tuto-imersao-game-dev
 - [] Faça um background com aparência 3D usando duas imagens diferentes, com velocidades diferentes. É o efeito paralaxe. Para isso, você precisa que o da frente tenha transparência
 - [] Coloque elementos diferentes em seu jogo: abelhas, borboletas, o que você achar que vai ficar legal!
 - [] Faça uma tela de game over mais elaborada, explicando o que aconteceu com a personagem e porque a pessoa perdeu.
+
+## Aula 03
+
+### Vídeo YouTube
+
+[![#ImersaoGameDev - @RogerioPradoJ - Aula 03](https://img.youtube.com/vi/79CLmq2z2OE/0.jpg)](https://www.youtube.com/watch?v=79CLmq2z2OE)
+
+### Desafios
+
+- [] Configure o jogo para que tenhamos apenas um inimigo aparecendo de cada vez.
+- [] A colisão da Hipsta com os inimigos não está muito legal...será que conseguimos melhorar isso?
+- [] Crie uma tela inicial para o jogo.
+- [] Faça com que moedas apareçam durante o jogo e, conforme a Hipsta as pega, ela acumula mais pontos.
