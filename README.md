@@ -2,12 +2,13 @@
 
 https://rogeriopradoj.github.io/tuto-imersao-game-dev
 
-#ImersaoGameDev - @RogerioPradoJ
+<div align="center">
+    <a href="https://rogeriopradoj.github.io/tuto-imersao-game-dev"><img src="imagens/assets/capa.png?raw=true" width="400px"/></a>
+</div>
 
----
-
+- Jogo: As aventuras dos amigos do Leonardo
+- #ImersaoGameDev - @RogerioPradoJ
 - Projeto: https://editor.p5js.org/rogeriopradoj/sketches/Alfym24ak
-
 - Imersão GameDev Alura: https://www.alura.com.br/imersao-gamedev-javascript
 
 ---
@@ -70,3 +71,25 @@ https://rogeriopradoj.github.io/tuto-imersao-game-dev
 - [] A colisão da Hipsta com os inimigos não está muito legal...será que conseguimos melhorar isso?
 - [] Crie uma tela inicial para o jogo.
 - [] Faça com que moedas apareçam durante o jogo e, conforme a Hipsta as pega, ela acumula mais pontos.
+
+## Aula 04
+
+### Vídeo YouTube
+
+[![#ImersaoGameDev - @RogerioPradoJ - Aula 04](https://img.youtube.com/vi/kDMDX3FpZE8/0.jpg)](https://www.youtube.com/watch?v=kDMDX3FpZE8)
+
+### Ferramentas usadas
+
+- Tela inicial: foto pessoal, google fotos, com pixelator
+- Leo: https://www.unscreen.com/ e tudo usado na aula 01
+- Música: https://pt.savefrom.net e https://www.youtube.com/watch?v=rqPwNboRox0
+- Fonte: https://www.1001fonts.com/
+- Fundo praia: https://craftpix.net/freebies/free-beach-2d-game-backgrounds/
+- Favicon: https://www.favicon-generator.org/
+- Analytics: https://analytics.google.com
+
+### Desafios
+
+- [] Crie a história do seu jogo através de várias cenas diferentes, por exemplo: qual a missão da Hipsta? O que acontece se ela não chegar onde precisa?
+- [] Onde mais você pode colocar estado? Criar uma segunda fase, depois de ter atingido X pontos ou passado N inimigos, é um bom desafio.
+- [] Quer ir realmente longe: a passagem de fase poderia ser feita de forma transparente: o novo background começa a aparecer, mas encaixando no background antigo. Entao voce precisa achar imagens de background que se encaixem e que, duas ou tres passadas de tela depois, possa levar a Hipsta de uma floresta a um deserto.

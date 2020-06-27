@@ -41,17 +41,77 @@ class Personagem extends Animacao {
   }
   
   estaColidindo(inimigo) {
-    const precisao = 0.8;
-    const colisao = collideRectRect(
-      this.x,
-      this.y,
-      this.largura * precisao,
-      this.altura * precisao,
-      inimigo.x,
-      inimigo.y,
-      inimigo.largura * precisao,
-      inimigo.altura * precisao
-    )
+    const precisao = {
+      top: 0.8,
+      bottom: 1,
+      left: 0.7,
+      right: 0.6,
+    };
+    
+    const precisaoInimigo = {
+      top: 0.7,
+      bottom: 0.7,
+      left: 0.7,
+      right: 0.7,
+    };
+    
+    let personagemPoly = [
+      {
+        x:this.x + this.largura * (1 - precisao.left),
+        y:this.y + this.altura * (1 - precisao.top),
+      },
+      {
+        x:this.x + this.largura - this.largura * (1 - precisao.right),
+        y:this.y + this.altura * (1 - precisao.top),
+      },
+      {
+        x:this.x + this.largura - this.largura * (1 - precisao.right),
+        y:this.y + this.altura - this.largura * (1 - precisao.bottom),
+      },
+      {
+        x:this.x + this.largura * (1 - precisao.left),
+        y:this.y + this.altura - this.largura * (1 - precisao.bottom),
+      },
+    ];
+    let inimigoPoly = [
+      {
+        x:inimigo.x + inimigo.largura * (1 - precisaoInimigo.left),
+        y:inimigo.y + inimigo.altura * (1 - precisaoInimigo.top),
+      },
+      {
+        x:inimigo.x + inimigo.largura - inimigo.largura * (1 - precisaoInimigo.right),
+        y:inimigo.y + inimigo.altura * (1 - precisaoInimigo.top),
+      },
+      {
+        x:inimigo.x + inimigo.largura - inimigo.largura * (1 - precisaoInimigo.right),
+        y:inimigo.y + inimigo.altura - inimigo.largura * (1 - precisaoInimigo.bottom),
+      },
+      {
+        x:inimigo.x + inimigo.largura * (1 - precisaoInimigo.left),
+        y:inimigo.y + inimigo.altura - inimigo.largura * (1 - precisaoInimigo.bottom),
+      },
+    ];
+    
+    noFill();
+    strokeWeight(3);
+    stroke(0);
+    
+	// beginShape();
+	// for(let i=0; i < personagemPoly.length; i++){
+	// 	vertex(personagemPoly[i].x,personagemPoly[i].y);
+	// }
+	// endShape(CLOSE);
+	// beginShape();
+	// for(let i=0; i < inimigoPoly.length; i++){
+	// 	vertex(inimigoPoly[i].x,inimigoPoly[i].y);
+	// }
+	// endShape(CLOSE);
+    
+    const colisao = collidePolyPoly(personagemPoly, inimigoPoly, false)
+    
+    // console.log({personagemPoly});
+    // console.log({inimigoPoly});
+    // console.log({colisao});
     
     return colisao;
   }
